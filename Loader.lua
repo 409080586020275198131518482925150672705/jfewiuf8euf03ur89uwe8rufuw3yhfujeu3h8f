@@ -1,4 +1,3 @@
-repeat wait() until game:IsLoaded() 
 local function betterisfile(path)
     local suc, err = pcall(function()
         readfile(path)
@@ -13,13 +12,6 @@ local function getfile(path)
     end
 end
 
-key = "";
-
-if not _G.wl_key then
-    warn("Key not found, please enter key")
-else
-    key = _G.wl_key
-end
 
 if not isfolder("azura") then
     makefolder("azura")
@@ -34,7 +26,7 @@ if not isfolder("azura/Scripts") then
     makefolder("azura/Scripts")
 end
 
-queueontp = syn.queue_on_teleport or queue_on_teleport 
+
 
 local azura = {}
 azura["betterisfile"] = betterisfile
@@ -58,11 +50,5 @@ local suc, err = pcall(function()
         makefolder("azura/Scripts/"..GameSave)
     end
     shared["azuragame"] = GameSave    
-    queueontp([[
-        _G.wl_key = "]]..key..[["
-        repeat wait() until game:IsLoaded() 
-
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/409080586020275198131518482925150672705/jfewiuf8euf03ur89uwe8rufuw3yhfujeu3h8f/main/Loader.lua"))()
-    ]])
     loadstring(game:HttpGet("https://raw.githubusercontent.com/409080586020275198131518482925150672705/jfewiuf8euf03ur89uwe8rufuw3yhfujeu3h8f/main/Modules/"..GameSave..".lua"))()
 end)
