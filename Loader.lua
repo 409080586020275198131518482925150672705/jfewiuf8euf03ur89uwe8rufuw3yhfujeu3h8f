@@ -50,6 +50,8 @@ local suc, err = pcall(function()
         GameSave = "BedWarsGame"
     elseif PlaceId == 6872265039 then
         GameSave = "BedWarsLobby"
+    elseif PlaceId == 606849621 then
+        GameSave = "Jailbreak"
     end
     if not isfolder("azura/configs/"..GameSave) then
         makefolder("azura/configs/"..GameSave)
