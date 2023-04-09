@@ -1,3 +1,4 @@
+repeat wait() until game:IsLoaded() 
 local function betterisfile(path)
     local suc, err = pcall(function()
         readfile(path)
@@ -59,6 +60,7 @@ local suc, err = pcall(function()
     shared["azuragame"] = GameSave    
     queueontp([[
         _G.wl_key = "]]..key..[["
+        repeat wait() until game:IsLoaded() 
 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/409080586020275198131518482925150672705/jfewiuf8euf03ur89uwe8rufuw3yhfujeu3h8f/main/Loader.lua"))()
     ]])
