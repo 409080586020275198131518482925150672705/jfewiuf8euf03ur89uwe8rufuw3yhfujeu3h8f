@@ -1,5 +1,4 @@
 repeat wait() until game:IsLoaded() 
-print("running")
 local function betterisfile(path)
     local suc, err = pcall(function()
         readfile(path)
@@ -25,8 +24,8 @@ end
 if not isfolder("azura") then
     makefolder("azura")
 end
-   if not isfolder("azura/Config/"..GameSave) then
-        makefolder("azura/Config/"..GameSave)
+   if not isfolder("azura/Config") then
+        makefolder("azura/Config")
     end
 if not isfolder("azura/Scripts") then
     makefolder("azura/Scripts")
@@ -66,5 +65,4 @@ local suc, err = pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/409080586020275198131518482925150672705/jfewiuf8euf03ur89uwe8rufuw3yhfujeu3h8f/main/Loader.lua"))()
     ]])
     loadstring(game:HttpGet("https://raw.githubusercontent.com/409080586020275198131518482925150672705/jfewiuf8euf03ur89uwe8rufuw3yhfujeu3h8f/main/Modules/"..GameSave..".lua"))()
-print("loading")
     end)
