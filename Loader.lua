@@ -25,12 +25,9 @@ end
 if not isfolder("azura") then
     makefolder("azura")
 end
-if not isfolder("azura/configs") then
-    makefolder("azura/configs")
-end
-if not isfolder("azura/Modules") then
-    makefolder("azura/Modules")
-end
+   if not isfolder("azura/Config/"..GameSave) then
+        makefolder("azura/Config/"..GameSave)
+    end
 if not isfolder("azura/Scripts") then
     makefolder("azura/Scripts")
 end
@@ -42,7 +39,6 @@ azura["betterisfile"] = betterisfile
 azura["getfile"] = getfile
 azura["version"] = "v1.0"
 shared["azura"] = azura
-shared["azuraarray"] = loadstring(game:HttpGet("https://raw.githubusercontent.com/409080586020275198131518482925150672705/jfewiuf8euf03ur89uwe8rufuw3yhfujeu3h8f/main/ArrayLib.lua"))()
 local suc, err = pcall(function()
     local gameids = {6872274481, 8560631822, 8444591321}
     local GameSave = ""
