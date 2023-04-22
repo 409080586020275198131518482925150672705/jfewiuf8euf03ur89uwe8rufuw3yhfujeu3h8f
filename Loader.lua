@@ -52,8 +52,8 @@ local suc, err = pcall(function()
     elseif PlaceId == 142823291 then
         GameSave = "mm2"
     end
-    if not isfolder("azura/configs/"..GameSave) then
-        makefolder("azura/configs/"..GameSave)
+       if not isfolder("azura/Config/"..GameSave) then
+        makefolder("azura/Config/"..GameSave)
     end
     if not isfolder("azura/Scripts/"..GameSave) then
         makefolder("azura/Scripts/"..GameSave)
