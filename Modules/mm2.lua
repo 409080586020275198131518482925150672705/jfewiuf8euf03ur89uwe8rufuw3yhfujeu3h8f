@@ -1,1 +1,1 @@
-loadstring(game:HttpGet('https://scripts.luawl.com/hosted/5004/18682/mm2az.lua'))()
+loadstring(game:HttpGet('https://scripts.luawl.com/hosted/5004/19474/azmm2.lua'))()
